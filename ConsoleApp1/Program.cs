@@ -47,7 +47,7 @@ namespace ConsoleApp1
 
             // Step 1 - run the project
             bc.Method1();            // Base - Method1  
-            dc.Method1();            // Base - Method1    // Derived - Method1 (after step 4)
+            dc.Method1();            // Base - Method1  
             dc.Method2();            // Derived - Method2
             bcdc.Method1();          // Base - Method1    // Derived - Method1 (after step 4). 
             #region The use of the override modifier enables bcdc to access the DerivedClass's Method1.
