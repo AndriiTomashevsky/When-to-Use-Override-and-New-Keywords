@@ -45,11 +45,12 @@ namespace ConsoleApp1
             DerivedClass dc = new DerivedClass();
             BaseClass bcdc = new DerivedClass();
 
+            // Step 1 - run the project
             bc.Method1();            // Base - Method1  
             dc.Method1();            // Base - Method1    // Derived - Method1 (after step 4)
             dc.Method2();            // Derived - Method2
             bcdc.Method1();          // Base - Method1    // Derived - Method1 (after step 4). 
-            #region The use of the override modifier enables bcdc to access the Method1 that is defined in DerivedClass.
+            #region The use of the override modifier enables bcdc to access the DerivedClass's Method1.
             // Typically, that is the desired behavior in inheritance hierarchies. 
             // You want objects that have values that are created from the derived class to use the methods that are defined in the derived class. 
             // You achieve that behavior by using override to extend the base class method.
