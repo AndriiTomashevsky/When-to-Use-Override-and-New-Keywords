@@ -41,15 +41,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            BaseClass bc = new BaseClass();
-            DerivedClass dc = new DerivedClass();
-            BaseClass bcdc = new DerivedClass();
+            BaseClass baseBase = new BaseClass();
+            DerivedClass derivedDerived = new DerivedClass();
+            BaseClass baseDerived = new DerivedClass();
 
             // Step 1 - run the project
-            bc.Method1();            // Base - Method1  
-            dc.Method1();            // Base - Method1  
-            dc.Method2();            // Derived - Method2
-            bcdc.Method1();          // Base - Method1    // Derived - Method1 (after step 4). 
+            baseBase.Method1();            // Base - Method1  
+            derivedDerived.Method1();            // Base - Method1  
+            derivedDerived.Method2();            // Derived - Method2
+            baseDerived.Method1();          // Base - Method1    // Derived - Method1 (after step 4). 
             #region The use of the override modifier enables bcdc to access the DerivedClass's Method1.
             // Typically, that is the desired behavior in inheritance hierarchies. 
             // You want objects that have values that are created from the derived class to use the methods that are defined in the derived class. 
@@ -58,8 +58,8 @@ namespace ConsoleApp1
 
 
             // uncomment for step 2
-            //bc.Method2();          // Base - Method2
-            //bcdc.Method2();        // Base - Method2
+            //baseBase.Method2();          // Base - Method2
+            //baseDerived.Method2();        // Base - Method2
 
             Console.ReadKey();
         }
